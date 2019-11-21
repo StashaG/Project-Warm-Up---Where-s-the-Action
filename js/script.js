@@ -28,6 +28,18 @@ console.log(buttons);
     // 1aa. Inside the loop, use `.classList.remove()` to remove the 'active' class name from all buttons
   // 1b. After the loop, create a variable and set it equal to `event.target`
   // 1d. Then use `.classList.add()` to add the 'active' class name to the `event.target` variable you just created
+
+  const setAction = (event) =>{
+    for (let i = 0; i < buttons.length; i += 1) {
+      buttons.classList.remove('active');
+    }
+
+    let x = event.target;
+    event.target.classList.add('active');
+  };
+
+
+
   
 // 2. Call the `setAction()` function in the callbacks of the event listeners below, being sure pass in the event argument
 
