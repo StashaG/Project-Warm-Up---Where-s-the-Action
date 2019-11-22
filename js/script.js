@@ -30,7 +30,7 @@ console.log(buttons);
   // 1d. Then use `.classList.add()` to add the 'active' class name to the `event.target` variable you just created
 
   const setAction = (event) =>{
-    for (let i = 0; i < buttons.length; i += 1) {
+    for (let i = 0; i < buttons.length; i ++) {
       buttons.classList.remove('active');
     }
 
@@ -39,8 +39,6 @@ console.log(buttons);
   };
 
 
-
-  
 // 2. Call the `setAction()` function in the callbacks of the event listeners below, being sure pass in the event argument
 
 
@@ -53,7 +51,7 @@ console.log(buttons);
 btn1.addEventListener('click', (event) => {
 
   // Invoke your `setAction()` function here - Arguments: event
-
+setAction(event);
 
   // Helpful log statement to test function
   console.log('First button is functional!');
