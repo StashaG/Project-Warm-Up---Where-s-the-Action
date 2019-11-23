@@ -31,11 +31,11 @@ console.log(buttons);
 
   const setAction = (event) =>{
     for (let i = 0; i < buttons.length; i ++) {
-      buttons.classList.remove('active');
+      buttons[i].classList.remove('active');
     }
 
-    let x = event.target;
-    event.target.classList.add('active');
+    let e = event.target;
+    e.classList.add('active');
   };
 
 
@@ -62,7 +62,7 @@ setAction(event);
 btn2.addEventListener('click', (event) => {
 
   // Invoke your `setAction()` function here - Arguments: event
-  
+setAction(event);  
 
   // Helpful log statement to test function
   console.log('Second button is functional!');
@@ -73,7 +73,7 @@ btn2.addEventListener('click', (event) => {
 btn3.addEventListener('click', (event) => {
 
   // Invoke your `setAction()` function here - Arguments: event
-
+setAction(event);
 
   // Helpful log statement to test function
   console.log('Third button is functional!');
